@@ -1,0 +1,3 @@
+class River extends Terrain{
+  
+}
