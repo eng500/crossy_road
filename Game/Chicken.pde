@@ -59,24 +59,28 @@ public class Chicken{
     //if (xPos >= (0 + distance) && xPos <= (width - distance) && yPos >= (0 + distance) && yPos <= (height - distance)){
       if (direction == 1){
         if (yPos >= (0 + distance)){
+          background(98, 196, 90);
           yPos = yPos - distance;
           makeAvatar(1);
         }
       }
       else if (direction == 2){
         if (yPos <= (height - distance)){
+          background(98, 196, 90);
           yPos = yPos + distance;
           makeAvatar(2);
         }
       }
       else if (direction == 3){
         if (xPos >= (0 + distance)){
+          background(98, 196, 90);
           xPos = xPos - distance;
           makeAvatar(3);
         }
       }
       else{
         if (xPos <= (width - distance)){
+          background(98, 196, 90);
           xPos = xPos + distance;
           makeAvatar(4);
         }
@@ -88,8 +92,6 @@ public class Chicken{
     noStroke();
     
     if (direction == 1){
-      fill(13, 164, 252);
-      rect(this.xPos, this.yPos, 50, 50);
       
       fill(252, 153, 13);
       ellipse(this.xPos + 20, this.yPos + 45, 10, 10);
@@ -103,8 +105,6 @@ public class Chicken{
       rect(this.xPos + 24, this.yPos, 4, 10);
     }
     if (direction == 2){
-      fill(13, 164, 252);
-      rect(this.xPos, this.yPos, 50, 50);
       
       fill(252, 153, 13);
       ellipse(this.xPos + 20, this.yPos + 45, 10, 10);
@@ -125,8 +125,6 @@ public class Chicken{
       rect(this.xPos + 24, this.yPos, 4, 3);
     }
     if (direction == 3){
-      fill(13, 164, 252);
-      rect(this.xPos, this.yPos, 50, 50);
       
       fill(252, 153, 13);
       ellipse(this.xPos + 26, this.yPos + 45, 10, 10);
@@ -145,8 +143,6 @@ public class Chicken{
       rect(this.xPos + 20, this.yPos, 12, 2);
     }
     if (direction == 4){
-      fill(13, 164, 252);
-      rect(this.xPos, this.yPos, 50, 50);
       
       fill(252, 153, 13);
       ellipse(this.xPos + 26, this.yPos + 45, 10, 10);
