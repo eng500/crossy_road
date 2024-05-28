@@ -2,11 +2,11 @@ Chicken player = new Chicken();
 
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now?
-
+  Chicken player = new Chicken();
 }
 
 void draw(){
-
+  
 }
 
 void keyPressed(){
@@ -25,4 +25,5 @@ void keyPressed(){
     }
   }
   print(player.getX());
+  print(player.getY());
 }
