@@ -38,4 +38,7 @@ class Terrain{
  void setY(int y){
    this.yPos = y;
  }
+ 
+ void makeAvatar(){
+ }
 }
