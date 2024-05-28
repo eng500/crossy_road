@@ -50,7 +50,24 @@ public class Chicken{
   }
   
   void move(int direction){
-    
+    //NOTE TO EMILY: I need to mkae boundaries so the chicken doesnt wander off screen
+    int distance = 50;
+    // 1 - up
+    // 2 - down
+    // 3 - left
+    // 4 - right
+    if (direction == 1){
+      yPos = yPos - distance;
+    }
+    else if (direction == 2){
+      yPos = yPos + distance;
+    }
+    else if (direction == 3){
+      xPos = xPos - distance;
+    }
+    else{
+      xPos = xPos + distance;
+    }
   }
   
 
