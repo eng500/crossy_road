@@ -1,3 +1,4 @@
+/**
 class River extends Terrain{
   River(int x, int y){
     super(x, y, 50, width, 3);
@@ -10,3 +11,4 @@ class River extends Terrain{
     rect(super.getX(), super.getY(), super.getWidth(), super.getHeight());
   }
 }
+*/
