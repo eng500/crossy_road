@@ -3,6 +3,7 @@ int ori = 1; //the chicken's direction it is facing
 Terrain test = new Lilypad(300, 300);
 Road r1 = new Road(200);
 Highway h1;
+Rock ro1 = new Rock(300, 300);
 
 
 void setup(){
@@ -14,6 +15,7 @@ void draw(){
   background(144, 212, 108);
   h1.makeHighway();
   player.makeAvatar(ori);
+  ro1.makeAvatar();
 }
 
 void keyPressed(){
