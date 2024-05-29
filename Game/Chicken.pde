@@ -4,14 +4,12 @@ public class Chicken{
   int xPos;
   int yPos;
   boolean alive;
-  boolean leftOri; //which way the chicken's beak is facing - might omit if too confusing
   int points;
   
   public Chicken(){
     xPos = 600/2;
     yPos = 600 - 150;
     alive = true;
-    leftOri = false;
     points = 0;
   }
   
@@ -37,14 +35,6 @@ public class Chicken{
   
   void setAlive(boolean status){
     alive = status;
-  }
-  
-  boolean getLeftOri(){
-    return leftOri;
-  }
-  
-  void setLeftOri(boolean status){
-    leftOri = status;
   }
   
   int getPoints(){
