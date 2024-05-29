@@ -14,6 +14,5 @@ class Road extends Terrain{
     rect(super.getX() + 170, super.getY() + 3, 50, super.getHeight()/8);
     rect(super.getX() + 320, super.getY() + 3, 50, super.getHeight()/8);
     rect(super.getX() + 470, super.getY() + 3, 50, super.getHeight()/8);
-
   }
 }
