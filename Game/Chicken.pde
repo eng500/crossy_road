@@ -46,33 +46,28 @@ public class Chicken{
     // 2 - down
     // 3 - left
     // 4 - right
-    //if (xPos >= (0 + distance) && xPos <= (width - distance) && yPos >= (0 + distance) && yPos <= (height - distance)){
       if (direction == 1){
         if (yPos >= (0 + distance)){
-          background(198, 232, 242);
           yPos = yPos - distance;
-          makeAvatar(1);
+          //makeAvatar(1);
         }
       }
       else if (direction == 2){
-        if (yPos <= (height - distance)){
-          background(198, 232, 242);
+        if (yPos <= (height - distance - 50)){
           yPos = yPos + distance;
-          makeAvatar(2);
+          //makeAvatar(2);
         }
       }
       else if (direction == 3){
         if (xPos >= (0 + distance)){
-          background(198, 232, 242);
           xPos = xPos - distance;
-          makeAvatar(3);
+          //makeAvatar(3);
         }
       }
       else{
-        if (xPos <= (width - distance)){
-          background(198, 232, 242);
+        if (xPos <= (width - distance - 50)){
           xPos = xPos + distance;
-          makeAvatar(4);
+          //makeAvatar(4);
         }
       }
   }
