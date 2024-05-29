@@ -1,5 +1,5 @@
 Chicken player = new Chicken();
-Terrain test = new Lilypad(300, 300);
+Terrain test = new Tree(300, 300);
 Road r1 = new Road(200);
 Highway h1;
 
