@@ -8,11 +8,11 @@ class Tree extends Terrain{
     //trunk
     noStroke();
     fill(88, 51, 3);
-    rect(super.getX()-25, super.getY()-25, 18, 25);
+    rect(super.getX()-9, super.getY()+12.5, 18, 25);
     
     //leaves
     noStroke();
     fill(119, 175, 87);
-    ellipse(super
+    ellipse(super.getX(), super.getY(), 50, 25);
   }
 }

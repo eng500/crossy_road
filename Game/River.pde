@@ -1,7 +1,6 @@
-/**
-class River extends Terrain{
-  River(int x, int y){
-    super(x, y, 50, width, 3);
+public class River extends Terrain{
+  public River(int x, int y){
+    super(0, y, 50, 600, 3);
   }
   
   @Override
@@ -11,4 +10,3 @@ class River extends Terrain{
     rect(super.getX(), super.getY(), super.getWidth(), super.getHeight());
   }
 }
-*/
