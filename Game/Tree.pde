@@ -13,6 +13,6 @@ class Tree extends Terrain{
     //leaves
     noStroke();
     fill(119, 175, 87);
-    ellipse(super
+    //ellipse(super
   }
 }

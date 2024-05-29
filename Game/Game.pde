@@ -1,8 +1,10 @@
 Chicken player = new Chicken();
+Road r1 = new Road(200);
+
 
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now?
-  Chicken player = new Chicken();
+  Highway h1 = new Highway(200);
 }
 
 void draw(){
