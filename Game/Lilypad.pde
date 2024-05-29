@@ -3,7 +3,7 @@ public class Lilypad extends Terrain{
     super(x, y, 50, 50, 1);
   }
   
-  @Override
+  //@Override
   void makeAvatar(){
     noStroke();
     fill(96, 191, 100);

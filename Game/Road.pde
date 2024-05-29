@@ -3,7 +3,7 @@ class Road extends Terrain{
     super(0, y, 50, 600, 1);
   }
   
-  @Override
+  //@Override
   void makeAvatar(){
     noStroke();
     fill(56, 56, 56);
