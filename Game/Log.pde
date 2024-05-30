@@ -3,8 +3,8 @@ PVector location, velocity;
 public class Log extends Terrain{
   public Log(int x, int y){
     super(x, y, 50, 50*int(random(3, 6)), 1);
-    PVector location = new PVector(super.getX(), super.getY());
-    PVector velocity = new PVector(1, 0);
+    location = new PVector(x, y);
+    velocity = new PVector(0.7, 0);
   }
   
   void move(){
