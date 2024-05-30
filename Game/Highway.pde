@@ -10,8 +10,8 @@ class Highway{
   }
   
   void makeHighway(){
-    for (Road road : roads){
-      road.makeAvatar();
+    for (int i = 0; i < roads.size(); i++){
+      roads.get(i).makeAvatar();
     }
   }
   
