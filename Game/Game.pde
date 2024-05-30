@@ -1,6 +1,6 @@
 Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing
-Log test;
+Log log;
 Road r1 = new Road(200);
 Highway h1;
 Rock ro1 = new Rock(300, 300);
@@ -9,16 +9,17 @@ Rock ro1 = new Rock(300, 300);
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now?
   h1 = new Highway(200);
-  test = new Log(0, 300);
+  log = new Log(0, 300);
 }
 
 void draw(){
   background(144, 212, 108);
   h1.makeHighway();
-  test.move();
+  log.move();
   //test2.move();
   ro1.makeAvatar();
   player.makeAvatar(ori);
+//  if (player.getX() >= test.getX() || player.getX() <= test.X()+test.width
 }
 
 void keyPressed(){
