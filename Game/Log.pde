@@ -1,15 +1,15 @@
-PVector location, velocity;
+PVector l_location, l_velocity;
 
 public class Log extends Terrain{
   public Log(int x, int y){
     super(x, y, 50, 50*int(random(3, 6)), 1);
-    location = new PVector(x, y);
-    velocity = new PVector(0.7, 0);
+    l_location = new PVector(x, y);
+    l_velocity = new PVector(0.7, 0);
   }
   
   void move(){
-    location.add(velocity);
-    makeAvatar((int)(location.x), (int)(location.y));
+    l_location.add(l_velocity);
+    makeAvatar((int)(l_location.x), (int)(l_location.y));
   }
   
   //@Override
