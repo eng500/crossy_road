@@ -9,7 +9,5 @@ class Rock extends Terrain{
     fill(125, 128, 126);
     ellipse(this.xPos, this.yPos, 48, 40);
     
-    
-    
   }
 }

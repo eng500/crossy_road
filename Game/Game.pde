@@ -1,6 +1,6 @@
 Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing
-Terrain test = new Lilypad(300, 300);
+//Terrain test = new Lilypad(300, 300);
 Terrain test2 = new Tree(300, 300);
 Log test = new Log(300, 300);
 Road r1 = new Road(200);

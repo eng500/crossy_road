@@ -39,6 +39,6 @@ public class Terrain{
    this.yPos = y;
  }
  
- //void makeAvatar(){
- //}
+ void makeAvatar(){
+ }
 }
