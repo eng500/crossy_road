@@ -16,6 +16,7 @@ void draw(){
   background(144, 212, 108);
   h1.makeHighway();
   test.move();
+  //test2.move();
   ro1.makeAvatar();
   player.makeAvatar(ori);
 }
