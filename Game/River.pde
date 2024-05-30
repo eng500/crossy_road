@@ -3,7 +3,7 @@ public class River extends Terrain{
     super(0, y, 50, 600, 3);
   }
   
-  @Override
+  //@Override
   void makeAvatar(){
     noStroke();
     fill(113, 190, 255);

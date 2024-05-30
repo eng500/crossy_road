@@ -3,7 +3,7 @@ class Tree extends Terrain{
     super(x, y, 50, 50, 2);
   }
   
-  @Override
+  //@Override
   void makeAvatar(){
     //trunk
     noStroke();
