@@ -3,7 +3,7 @@ class Rock extends Terrain{
     super(x, y, 50, 50, 2);
   }
   
-  //@Override
+  @Override
   void makeAvatar(){
     noStroke();
     fill(125, 128, 126);
