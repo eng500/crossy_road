@@ -9,14 +9,14 @@ public class Car extends Terrain{
   
   void move(){
     c_location.add(c_velocity);
-    makeAvatar((int)(c_location.x), (int)(c_location.y));
   }
   
-  //@Override
-  void makeAvatar(int x, int y){
+  void makeAvatar(){
     noStroke();
-    fill(116, 79, 62);
-    rect(super.getX(), super.getY(), super.getWidth(), super.getHeight());
+    fill(255);
+    ellipse(super.getX(), super.getY() + 20, super.getWidth(), super.getHeight() - 10);
+    //rect(super.getX(), super.getY() + 4, super.getWidth(), super.getHeight());
+    print(getWidth() + " " + getHeight());
     
   }
 }
