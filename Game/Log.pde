@@ -12,7 +12,6 @@ public class Log extends Terrain{
     makeAvatar((int)(l_location.x), (int)(l_location.y));
   }
   
-  //@Override
   void makeAvatar(int x, int y){
     noStroke();
     fill(116, 79, 62);
