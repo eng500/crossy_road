@@ -1,15 +1,12 @@
 Chicken player = new Chicken();
-<<<<<<< HEAD
 int ori = 1; //the chicken's direction it is facing;
 Car c1 = new Car(200, 200);
-=======
 int ori = 1; //the chicken's direction it is facing
 //Terrain test = new Lilypad(300, 300);
 Terrain test2 = new Tree(300, 300);
 Log test = new Log(300, 300);
 Log log;
 //Terrain test = new Lilypad(300, 300);
->>>>>>> 52e6569fa9a03b21a59976098960106f7ddc4d95
 Road r1 = new Road(200);
 Highway h1;
 Rock ro1 = new Rock(300, 300);
@@ -29,12 +26,9 @@ void draw(){
   background(144, 212, 108);
   h1.makeHighway();
   ro1.makeAvatar();
-<<<<<<< HEAD
   c1.makeAvatar();
-=======
   pushMatrix();
   translate(0, -50);
->>>>>>> 52e6569fa9a03b21a59976098960106f7ddc4d95
   player.makeAvatar(ori);
 //  if (player.getX() >= test.getX() || player.getX() <= test.X()+test.width
 }
