@@ -8,6 +8,8 @@ Log log;
 Road r1 = new Road(200);
 Highway h1;
 Rock ro1 = new Rock(300, 300);
+int timer;
+Camera camera = new Camera();
 
 
 void setup(){
@@ -19,11 +21,15 @@ void setup(){
 
 void draw(){
   background(144, 212, 108);
+  if (millis() - timer >= 2000) {
+    camera.advanceCam();
+    timer = millis();
+  }
   h1.makeHighway();
   log.move();
   //test2.move();
   ro1.makeAvatar();
-  pushMatrix();
+  //pushMatrix();
   translate(0, -50);
   player.makeAvatar(ori);
 //  if (player.getX() >= test.getX() || player.getX() <= test.X()+test.width
