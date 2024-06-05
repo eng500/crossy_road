@@ -147,5 +147,18 @@ public class Chicken{
     }
   }
   
+  //call Terrain.getResponse()
+  void respondMove(int r){
+    // 1 = neutral, 2 = blocks chicken from advancing, 3 = dangerous/deadly
+    if (r == 1){
+      
+    }
+    if (r == 2){
+    
+    }
+    if (r == 3){
+    
+    }
+  }
 
 }

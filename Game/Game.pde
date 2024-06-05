@@ -1,3 +1,4 @@
+public int[][] board = new int[12][12];
 Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing;
 Car c1 = new Car(200, 200);
@@ -6,7 +7,6 @@ Highway h1 = new Highway(200);
 Rock ro1 = new Rock(300, 300);
 int timer;
 Camera camera = new Camera();
-
 
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now?  

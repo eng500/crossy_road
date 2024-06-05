@@ -11,6 +11,30 @@ public class Terrain{
    this.response = response;
  }
  
+ int roundX(){
+   int d = getX() / 50;
+   int r = getX() % 50;
+   
+   if (r < 25){
+     return d * 50;
+   }
+   else{
+     return (d + 1) * 50;
+   }
+   
+ }
+  int roundY(){
+   int d = getY() / 50;
+   int r = getY() % 50;
+   
+   if (r < 25){
+     return d * 50;
+   }
+   else{
+     return (d + 1) * 50;
+   }
+ }
+ 
  int getX(){
    return this.xPos;
  }

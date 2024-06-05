@@ -8,7 +8,9 @@ public class Car extends Terrain{
   }
   
   void move(){
+    board[roundY()][roundX()] = 0;
     c_location.add(c_velocity);
+    board[roundY()][roundX()] = 1;
     makeAvatar((int) c_location.x, (int) c_location.y);
   }
   

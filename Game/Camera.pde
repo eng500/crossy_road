@@ -11,8 +11,9 @@ public class Camera{
     }
   }
   
+  /**
   void add Terrain(){
     int rand()
   }
-  
+  */
 }
