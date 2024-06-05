@@ -14,14 +14,17 @@ void setup(){
 
 void draw(){
   background(144, 212, 108);
-  if (millis() - timer >= 2000) {
+  //h1.makeHighway();
+  camera.makeAvatars();
+  player.makeAvatar(ori);
+
+  if (millis() - timer >= 2000) { // does the below actions every ? seconds
+    camera.addTerrain();
     camera.advanceCam();
     timer = millis();
   }
-  h1.makeHighway();
-  ro1.makeAvatar();
-  c1.move();
-  player.makeAvatar(ori);
+  //ro1.makeAvatar();
+  //c1.move();
 }
 
 void keyPressed(){
@@ -48,6 +51,6 @@ void keyPressed(){
     //  test.makeAvatar();
     //}
   }
-  print(player.getX());
-  print(player.getY());
+  //print(player.getX());
+  //print(player.getY());
 }
