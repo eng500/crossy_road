@@ -7,10 +7,8 @@ public class Car extends Terrain{
     c_velocity = new PVector(0.8, 0.0);
   }
   
-  void move(){
-    board[roundY()][roundX()] = 0;
+  public void move(){
     c_location.add(c_velocity);
-    board[roundY()][roundX()] = 1;
     makeAvatar((int) c_location.x, (int) c_location.y);
   }
   
@@ -34,10 +32,6 @@ public class Car extends Terrain{
     fill(0);
     rect(x - 32, y + 6, super.getWidth() - 60, super.getHeight() - 40);
     rect(x + 12, y + 6, super.getWidth() - 84, super.getHeight() - 40);
-
-
-
-    print(getWidth() + " " + getHeight());
     
   }
 }

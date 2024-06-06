@@ -1,10 +1,11 @@
-public int[][] board = new int[12][12];
+public ArrayList<int[]> oList = new ArrayList<int[]>();
 Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing;
 Car c1 = new Car(200, 200);
 Road r1 = new Road(200);
 Highway h1 = new Highway(200);
 Rock ro1 = new Rock(300, 300);
+Lilypad l1 = new Lilypad(100, 100);
 int timer;
 Camera camera = new Camera();
 
@@ -14,14 +15,18 @@ void setup(){
 
 void draw(){
   background(144, 212, 108);
+  /**
   if (millis() - timer >= 2000) {
     camera.advanceCam();
     timer = millis();
   }
+  */
   h1.makeHighway();
   ro1.makeAvatar();
   c1.move();
+  l1.makeAvatar();
   player.makeAvatar(ori);
+  //print("Chicken:" + player.roundX() + "   " + player.roundY());  
 }
 
 void keyPressed(){
@@ -48,6 +53,7 @@ void keyPressed(){
     //  test.makeAvatar();
     //}
   }
-  print(player.getX());
-  print(player.getY());
+  //print(player.getX());
+  //print(player.getY());
+  
 }
