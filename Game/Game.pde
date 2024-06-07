@@ -24,7 +24,7 @@ void draw(){
     camera.advanceCam();
     timer = millis();
   }
-  */
+
   h1.makeHighway();
   ro1.makeAvatar();
   c1.move();

@@ -59,4 +59,11 @@ public class Camera{
       Tree tree = new Tree(0,0);
       background.add(tree);
     }
+
+  /**
+  void add Terrain(){
+    int rand()
+>>>>>>> Emily
+  }
+  */
 }
