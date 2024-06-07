@@ -7,12 +7,12 @@ public class Log extends Terrain{
     l_velocity = new PVector(0.7, 0);
   }
   
-  void move(){
+  public void move(){
     l_location.add(l_velocity);
     makeAvatar((int)(l_location.x), (int)(l_location.y));
   }
   
-  void makeAvatar(int x, int y){
+  public void makeAvatar(int x, int y){
     noStroke();
     fill(116, 79, 62);
     //rect(super.getX(), super.getY(), super.getWidth(), super.getHeight());

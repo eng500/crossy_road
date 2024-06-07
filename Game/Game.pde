@@ -1,12 +1,13 @@
+public ArrayList<int[]> oList = new ArrayList<int[]>();
 Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing;
 Car c1 = new Car(200, 200);
 Road r1 = new Road(200);
 Highway h1 = new Highway(200);
 Rock ro1 = new Rock(300, 300);
+Lilypad l1 = new Lilypad(100, 100);
 int timer;
 Camera camera = new Camera();
-
 
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now?  
@@ -18,13 +19,18 @@ void draw(){
   camera.makeAvatars();
   player.makeAvatar(ori);
 
-  if (millis() - timer >= 500) { // does the below actions every ? seconds
-    camera.addTerrain();
+  /**
+  if (millis() - timer >= 2000) {
     camera.advanceCam();
     timer = millis();
   }
-  //ro1.makeAvatar();
-  //c1.move();
+  */
+  h1.makeHighway();
+  ro1.makeAvatar();
+  c1.move();
+  l1.makeAvatar();
+  player.makeAvatar(ori);
+  //print("Chicken:" + player.roundX() + "   " + player.roundY());  
 }
 
 void keyPressed(){
@@ -53,4 +59,8 @@ void keyPressed(){
   }
   //print(player.getX());
   //print(player.getY());
+<<<<<<< HEAD
+=======
+  
+>>>>>>> Emily
 }

@@ -1,10 +1,10 @@
 class Road extends Terrain{
-  Road(int y){
+  public Road(int y){
     super(0, y, 50, 600, 1);
   }
   
   @Override
-  void makeAvatar(){
+  public void makeAvatar(){
     noStroke();
     fill(56, 56, 56);
     rect(super.getX(), super.getY(), super.getWidth(), super.getHeight());
