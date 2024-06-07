@@ -14,7 +14,7 @@ public class Camera{
   void advanceCam(){
     for (Terrain current : background){
       current.setY(current.getY()+50);
-      if (current.getY() > 600){
+      if (current.getY() > 600-51){
         background.remove(current);
       }
       //current.makeAvatar();
@@ -22,7 +22,7 @@ public class Camera{
   }
   
   void addTerrain(){
-    int random = (int)random(1, 9);
+    int random = (int)random(1, 9); // produces random int from 1(inc) to 9(exc) ??
     //print(random);
     if (random == 1){
       Car car = new Car(0, 0);

@@ -4,8 +4,8 @@ public class Terrain{
  // 1 = neutral, 2 = blocks chicken from advancing, 3 = dangerous/deadly
  
  public Terrain(int x, int y, int t_height, int t_width, int response){
-   this.xPos = x;
-   this.yPos = y;
+   this.xPos = x; // xcor of top left corner of the 50x50 "pixel" the object is in
+   this.yPos = y; // ycor of top left corner of the 50x50 "pixel" the object is in
    this.t_height = t_height;
    this.t_width = t_width;
    this.response = response;

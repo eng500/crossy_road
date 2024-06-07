@@ -18,7 +18,7 @@ void draw(){
   camera.makeAvatars();
   player.makeAvatar(ori);
 
-  if (millis() - timer >= 2000) { // does the below actions every ? seconds
+  if (millis() - timer >= 500) { // does the below actions every ? seconds
     camera.addTerrain();
     camera.advanceCam();
     timer = millis();
