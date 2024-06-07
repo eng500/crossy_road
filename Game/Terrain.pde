@@ -11,34 +11,58 @@ public class Terrain{
    this.response = response;
  }
  
- int getX(){
+ public int roundX(){
+   int d = getX() / 50;
+   int r = getX() % 50;
+   
+   if (r < 25){
+     return d * 50;
+   }
+   else{
+     return (d + 1) * 50;
+   }
+   
+ }
+  public int roundY(){
+   int d = getY() / 50;
+   int r = getY() % 50;
+   
+   if (r < 25){
+     return d * 50;
+   }
+   else{
+     return (d + 1) * 50;
+   }
+ }
+ 
+ public int getX(){
    return this.xPos;
  }
  
- int getY(){
+ public int getY(){
    return this.yPos;
  }
  
- int getHeight(){
+ public int getHeight(){
    return this.t_height;
  }
  
- int getWidth(){
+ public int getWidth(){
    return this.t_width;
  }
  
- int getResponse(){
+ public int getResponse(){
    return this.response;
  }
  
- void setX(int x){
+ public void setX(int x){
    this.xPos = x;
  }
  
- void setY(int y){
+ public void setY(int y){
    this.yPos = y;
  }
  
- void makeAvatar(){
+ public void makeAvatar(){
  }
 }

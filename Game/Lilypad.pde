@@ -1,10 +1,12 @@
 public class Lilypad extends Terrain{
   public Lilypad(int x, int y){
     super(x, y, 50, 50, 1);
+    int[] info = {super.roundX(), super.roundY(), super.getResponse()};
+    oList.add(info);
   }
   
   @Override
-  void makeAvatar(){
+  public void makeAvatar(){
     noStroke();
     fill(96, 191, 100);
     rect(super.getX()+13, super.getY(), super.getWidth()-13, super.getHeight());
