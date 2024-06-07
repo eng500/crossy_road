@@ -15,7 +15,6 @@ void setup(){
 
 void draw(){
   background(144, 212, 108);
-<<<<<<< HEAD
   //h1.makeHighway();
   camera.makeAvatars();
   player.makeAvatar(ori);
@@ -27,7 +26,6 @@ void draw(){
   }
   //ro1.makeAvatar();
   //c1.move();
-=======
   /**
   if (millis() - timer >= 2000) {
     camera.advanceCam();
@@ -40,7 +38,6 @@ void draw(){
   l1.makeAvatar();
   player.makeAvatar(ori);
   //print("Chicken:" + player.roundX() + "   " + player.roundY());  
->>>>>>> Emily
 }
 
 void keyPressed(){
@@ -69,8 +66,5 @@ void keyPressed(){
   }
   //print(player.getX());
   //print(player.getY());
-<<<<<<< HEAD
-=======
-  
->>>>>>> Emily
+
 }

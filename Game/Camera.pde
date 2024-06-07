@@ -24,7 +24,6 @@ public class Camera{
   }
   */
   
-<<<<<<< HEAD
   void addTerrain(){
     int random = (int)random(1, 9);
     //print(random);
@@ -60,11 +59,10 @@ public class Camera{
       Tree tree = new Tree(0,0);
       background.add(tree);
     }
-=======
+
   /**
   void add Terrain(){
     int rand()
->>>>>>> Emily
   }
   */
 }

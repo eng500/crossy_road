@@ -1,10 +1,10 @@
 class Tree extends Terrain{
-  Tree(int x, int y){
+  public Tree(int x, int y){
     super(x, y, 50, 50, 2);
   }
   
   //@Override
-  void makeAvatar(){
+  public void makeAvatar(){
     //trunk
     noStroke();
     fill(88, 51, 3);
