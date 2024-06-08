@@ -15,14 +15,21 @@ void setup(){
 void draw(){
   background(144, 212, 108);
   //h1.makeHighway();
-  camera.makeAvatars();
-  player.makeAvatar(ori);
-
+ 
   if (millis() - timer >= 500) { // does the below actions every ? seconds
     camera.addTerrain();
     camera.advanceCam();
     timer = millis();
-  }
+  }  
+  
+  camera.makeAvatars();
+  player.makeAvatar(ori);
+
+  //if (millis() - timer >= 500) { // does the below actions every ? seconds
+  //  camera.addTerrain();
+  //  camera.advanceCam();
+  //  timer = millis();
+  //}
   //ro1.makeAvatar();
   //c1.move();
 }

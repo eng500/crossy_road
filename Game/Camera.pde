@@ -12,12 +12,16 @@ public class Camera{
   }
   
   void advanceCam(){
-    for (Terrain current : background){
+    //int currInd = 0;
+    for (int i = 0; i < background.size(); i++){
+      Terrain current = background.get(i);
       current.setY(current.getY()+50);
-      if (current.getY() > 600-51){
-        background.remove(current);
+      if (current.getY() >= 600){
+        background.remove(i);
       }
-      //current.makeAvatar();
+      //else {
+      //  currInd++;
+      //}
     }
   }
   
