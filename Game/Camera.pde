@@ -1,7 +1,7 @@
 public class Camera{
   ArrayList<Terrain> background;
   
-  /**
+  
   public Camera(){
     background = new ArrayList<Terrain>();
   }
@@ -14,15 +14,19 @@ public class Camera{
   
   
   void advanceCam(){
-    for (Terrain current : background){
+    //int currInd = 0;
+    for (int i = 0; i < background.size(); i++){
+      Terrain current = background.get(i);
       current.setY(current.getY()+50);
-      if (current.getY() > 600-51){
-        background.remove(current);
+      if (current.getY() >= 600){
+        background.remove(i);
       }
-      //current.makeAvatar();
+      //else {
+      //  currInd++;
+      //}
     }
   }
-  */
+  
   
   void addTerrain(){
     int random = (int)random(1, 9); // produces random int from 1(inc) to 9(exc) ??
@@ -59,11 +63,5 @@ public class Camera{
       Tree tree = new Tree(0,0);
       background.add(tree);
     }
-
-  /**
-  void add Terrain(){
-    int rand()
->>>>>>> Emily
   }
-  */
 }

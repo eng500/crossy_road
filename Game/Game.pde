@@ -16,21 +16,23 @@ void setup(){
 void draw(){
   background(144, 212, 108);
   //h1.makeHighway();
+
+  if (millis() - timer >= 500) { // does the below actions every ? seconds
+    camera.addTerrain();
+    camera.advanceCam();
+    timer = millis();
+  }  
+  
   camera.makeAvatars();
   player.makeAvatar(ori);
 
-  /**
-  if (millis() - timer >= 2000) {
-    camera.advanceCam();
-    timer = millis();
-  }
-
-  h1.makeHighway();
-  ro1.makeAvatar();
-  c1.move();
-  l1.makeAvatar();
-  player.makeAvatar(ori);
-  //print("Chicken:" + player.roundX() + "   " + player.roundY());  
+  //if (millis() - timer >= 500) { // does the below actions every ? seconds
+  //  camera.addTerrain();
+  //  camera.advanceCam();
+  //  timer = millis();
+  //}
+  //ro1.makeAvatar();
+  //c1.move();
 }
 
 void keyPressed(){
@@ -59,8 +61,5 @@ void keyPressed(){
   }
   //print(player.getX());
   //print(player.getY());
-<<<<<<< HEAD
-=======
-  
->>>>>>> Emily
+
 }
