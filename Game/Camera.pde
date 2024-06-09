@@ -1,10 +1,5 @@
 public class Camera{
   ArrayList<Terrain> background;
-  
-<<<<<<< HEAD
-=======
-  
->>>>>>> 2899e02c376a4a92f441e8a7bd7119fc2f48ec0a
   public Camera(){
     background = new ArrayList<Terrain>();
   }
@@ -24,21 +19,11 @@ public class Camera{
       if (current.getY() >= 600){
         background.remove(i);
       }
-<<<<<<< HEAD
       current.makeAvatar();
     }
   }
   
-=======
-      //else {
-      //  currInd++;
-      //}
-    }
-  }
-  
-  
->>>>>>> 2899e02c376a4a92f441e8a7bd7119fc2f48ec0a
-  void addTerrain(){
+    void addTerrain(){
     int random = (int)random(1, 9); // produces random int from 1(inc) to 9(exc) ??
     //print(random);
     if (random == 1){
