@@ -54,6 +54,13 @@ public class Terrain{
    return this.response;
  }
  
+ public void move(){
+ }
+ 
+ public void shift(){
+    this.setY(this.getY()+50);
+ }
+ 
  public void setX(int x){
    this.xPos = x;
  }

@@ -1,8 +1,8 @@
 public class River extends Terrain{
   public River(int x, int y){
     super(0, y, 50, 600, 3);
-    int[] info = {0, super.getY(), super.getResponse()};
-    oList.add(info);
+    //int[] info = {0, super.getY(), super.getResponse()};
+    //oList.add(info);
   }
   
   @Override

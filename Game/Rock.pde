@@ -3,8 +3,8 @@ class Rock extends Terrain{
     super(x, y, 50, 50, 2);
     
     //ROCK SHLD BE RESPONSE 2 - testing for now
-    int[] info = {super.roundX(), super.roundY(), super.getResponse()};
-    oList.add(info);
+    //int[] info = {super.roundX(), super.roundY(), super.getResponse()};
+    //oList.add(info);
     
     //println("Original rock X: " + super.getX());
     //println("rounded rock x: " + super.roundX());

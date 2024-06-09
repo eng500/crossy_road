@@ -1,7 +1,15 @@
+public Car[] cars;
+
 class Road extends Terrain{
   public Road(int y){
     super(0, y, 50, 600, 1);
+    float r = random(1, 5);
+    cars = new Car[(int)r];
+    for (int i = 0; i < cars.length; i++){
+      cars[i] = new Car(0, getY());
+    }
   }
+ 
   
   @Override
   public void makeAvatar(){

@@ -1,9 +1,9 @@
-public ArrayList<int[]> oList = new ArrayList<int[]>();
+//public ArrayList<int[]> oList = new ArrayList<int[]>();
 Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing;
 int timer;
 Camera camera = new Camera();
-River r1 = new River(200, 200);
+//River r1 = new River(200, 200);
 
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now  
@@ -11,6 +11,12 @@ void setup(){
 
 void draw(){
   background(144, 212, 108);
+  if (player.danger() == true){
+    player.die();
+  }
+  
+  player.autoBlock();
+  player.dieOffScreen();
   
   //on the board:
   // valid x values range from 0-550
@@ -21,6 +27,7 @@ void draw(){
   //y value of a square starts from top side's y
   //y = 0 is 1st square, x = 250 is 6th square, y = 300 is 7th square, y = 550 is 12th square
   
+  /**
   fill(0);
   rect(0, 0, 50, 50);
   rect(0, 100, 50, 50);
@@ -36,6 +43,7 @@ void draw(){
   rect(350, 0, 50, 50);
   rect(450, 0, 50, 50);
   rect(550, 0, 50, 50);
+  */
     
   //camera.makeAvatars();
 
@@ -51,8 +59,8 @@ void draw(){
   }
   */
   
-  r1.makeAvatar();
-  println(r1.roundX() + " " + r1.roundY());
+  //r1.makeAvatar();
+  //println(r1.roundX() + " " + r1.roundY());
   
   
   player.makeAvatar(ori);

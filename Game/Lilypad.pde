@@ -1,8 +1,8 @@
 public class Lilypad extends Terrain{
   public Lilypad(int x, int y){
     super(x, y, 50, 50, 1);
-    int[] info = {super.roundX(), super.roundY(), super.getResponse()};
-    oList.add(info);
+    //int[] info = {super.roundX(), super.roundY(), super.getResponse()};
+    //oList.add(info);
   }
   
   @Override

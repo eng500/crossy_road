@@ -1,8 +1,8 @@
 class Tree extends Terrain{
   public Tree(int x, int y){
     super(x, y, 50, 50, 2);
-    int[] info = {roundX(), roundY(), getResponse()};
-    oList.add(info);
+    //int[] info = {roundX(), roundY(), getResponse()};
+    //oList.add(info);
   }
   
   @Override

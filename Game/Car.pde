@@ -9,7 +9,9 @@ public class Car extends Terrain{
     col = new float[] {random(255), random(255), random(255)};
   }
   
+  
   public void move(){
+    
     c_location.add(c_velocity);
     makeAvatar((int) c_location.x, (int) c_location.y);
   }
