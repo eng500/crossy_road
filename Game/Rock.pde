@@ -17,6 +17,7 @@ class Rock extends Terrain{
   public void makeAvatar(){
     noStroke();
     fill(125, 128, 126);
-    ellipse(this.xPos-25, this.yPos-25, 48, 40);
+    ellipse(this.xPos+25, this.yPos+25, 48, 40);
+    
   }
 }

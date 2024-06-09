@@ -1,6 +1,10 @@
 public class Camera{
   ArrayList<Terrain> background;
   
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 2899e02c376a4a92f441e8a7bd7119fc2f48ec0a
   public Camera(){
     background = new ArrayList<Terrain>();
   }
@@ -13,17 +17,29 @@ public class Camera{
   
   
   void advanceCam(){
-    for (Terrain current : background){
+    //int currInd = 0;
+    for (int i = 0; i < background.size(); i++){
+      Terrain current = background.get(i);
       current.setY(current.getY()+50);
-      if (current.getY() > 600){
-        background.remove(current);
+      if (current.getY() >= 600){
+        background.remove(i);
       }
+<<<<<<< HEAD
       current.makeAvatar();
     }
   }
   
+=======
+      //else {
+      //  currInd++;
+      //}
+    }
+  }
+  
+  
+>>>>>>> 2899e02c376a4a92f441e8a7bd7119fc2f48ec0a
   void addTerrain(){
-    int random = (int)random(1, 9);
+    int random = (int)random(1, 9); // produces random int from 1(inc) to 9(exc) ??
     //print(random);
     if (random == 1){
       Car car = new Car(0, 0);

@@ -11,6 +11,7 @@ void setup(){
 
 void draw(){
   background(144, 212, 108);
+<<<<<<< HEAD
   
   //on the board:
   // valid x values range from 0-550
@@ -61,6 +62,26 @@ void draw(){
   //println("Original chickne X: " + player.getX());
   //println("Original chickne Y: " + player.getY());
   //player.die();
+=======
+  //h1.makeHighway();
+
+  if (millis() - timer >= 500) { // does the below actions every ? seconds
+    camera.addTerrain();
+    camera.advanceCam();
+    timer = millis();
+  }  
+  
+  camera.makeAvatars();
+  player.makeAvatar(ori);
+
+  //if (millis() - timer >= 500) { // does the below actions every ? seconds
+  //  camera.addTerrain();
+  //  camera.advanceCam();
+  //  timer = millis();
+  //}
+  //ro1.makeAvatar();
+  //c1.move();
+>>>>>>> 2899e02c376a4a92f441e8a7bd7119fc2f48ec0a
 }
 
 void keyPressed(){
@@ -82,5 +103,10 @@ void keyPressed(){
       player.move(ori);
     }
   }
+<<<<<<< HEAD
+=======
+  //print(player.getX());
+  //print(player.getY());
+>>>>>>> 2899e02c376a4a92f441e8a7bd7119fc2f48ec0a
 
 }
