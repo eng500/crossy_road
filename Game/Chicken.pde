@@ -7,8 +7,11 @@ public class Chicken{
   int points;
   
   public Chicken(){
-    xPos = 600/2;
-    yPos = 600 - 150;
+    //xPos = 600/2;
+    //yPos = 550;
+    
+    xPos = 0;
+    yPos = 0;
     alive = true;
     points = 0;
   }
@@ -29,30 +32,6 @@ public class Chicken{
     yPos = y;
   }
   
-  public int roundX(){
-   int d = getX() / 50;
-   int r = getX() % 50;
-   
-   if (r < 25){
-     return d * 50;
-   }
-   else{
-     return (d + 1) * 50;
-   }
-   
- }
-  public int roundY(){
-   int d = getY() / 50;
-   int r = getY() % 50;
-   
-   if (r < 25){
-     return d * 50;
-   }
-   else{
-     return (d + 1) * 50;
-   }
- }
-  
   public boolean getAlive(){
     return alive;
   }
@@ -66,62 +45,52 @@ public class Chicken{
   }
   
   //danger() will return true when the chicken must die
-  // 1 = neutral, 2 = blocks chicken from advancing, 3 = dangerous/deadly
+  // 1 = neutral, 2 = blocks chicken from advancing, 3 = river(dangerous), 4 = car (dangerous)
   public boolean danger(){
-    for (int i = 0; i < oList.size(); i++){
-      int[] ob = oList.get(i);
-       if (this.roundX() == ob[0] && this.roundY() == ob[1] && ob[2] == 3){
-         return true;
-       }
+    for (int[] infoVal : oList){
+      int[] ob = infoVal;
+      if (ob[2] == 3){
+        if (getY() == ob[1]){
+          return true;
+        }
+      }
     }
     return false;
   }
   
   //block() will return true when the chicken is blocked, and false when the chicken can move
   
-  /**
   public boolean block(int direction){
-    if (direction == 1){
-      for (int i = 0; i < oList.size(); i++){
-        int[] ob = oList.get(i);
-        if (this.roundX() == ob[0] && this.roundY() - 50 == ob[1]){
-          return true;
+    for (int[] infoVal : oList){
+      int[] ob = infoVal;
+      if (ob[2] == 2){
+        if (direction == 1){
+          if (getX() == ob[0] && getY() - 50 == ob[1]){
+            return true;
+          }
+        }
+        if (direction == 2){
+          if (getX() == ob[0] && getY() + 50 == ob[1]){
+            return true;
+          }
+        }
+        if (direction == 3){
+          if (getX() - 50 == ob[0] && getY() == ob[1]){
+            return true;
+          }
+        }
+        if (direction == 4){
+          if (getX() + 50 == ob[0] && getY() == ob[1]){
+            return true;
+          }
         }
       }
-      return false;
-    }
-    if (direction == 2){
-      for (int i = 0; i < oList.size(); i++){
-        int[] ob = oList.get(i);
-        if (this.roundX() == ob[0] && this.roundY() + 50 == ob[1]){
-          return true;
-        }
-      }
-      return false;
-    }
-    if (direction == 3){
-      for (int i = 0; i < oList.size(); i++){
-        int[] ob = oList.get(i);
-        if (this.roundX() - 50 == ob[0] && this.roundY() == ob[1]){
-          return true;
-        }
-      }
-      return false;
-    }
-    if (direction == 4){
-      for (int i = 0; i < oList.size(); i++){
-        int[] ob = oList.get(i);
-        if (this.roundX() + 50 == ob[0] && this.roundY() == ob[1]){
-          return true;
-        }
-      }
-      return false;
     }
     return false;
   }
-  */
   
   public void die(){
+    makeAvatar(5);
     exit();
   }
   
@@ -131,7 +100,7 @@ public class Chicken{
     // 3 - left
     // 4 - right
       if (direction == 1){
-        if (yPos >= (0 + distance) || block(1) == false){
+        if (yPos >= (0 + distance) && block(1) == false){
           yPos = yPos - distance;
           if (danger()){
             die();
@@ -236,6 +205,16 @@ public class Chicken{
       
       fill(252, 29, 13);
       rect(this.xPos + 20, this.yPos, 12, 2);
+    }
+    if (direction == 5){
+      fill(255);
+      rect(this.xPos, this.yPos, 50, 50, 28);
+     
+      fill(252, 29, 13);
+      rect(this.xPos + 24, this.yPos, 4, 10);
+      
+      
+      
     }
   }
   

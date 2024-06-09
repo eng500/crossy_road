@@ -1,7 +1,7 @@
 public class Terrain{
  int xPos, yPos, t_height, t_width, response;
  // int response corresponds to how the object/terrain affects the chicken:
- // 1 = neutral, 2 = blocks chicken from advancing, 3 = dangerous/deadly
+ // 1 = neutral, 2 = blocks chicken from advancing, 3 = river(dangerous), 4 = car (dangerous)
  
  public Terrain(int x, int y, int t_height, int t_width, int response){
    this.xPos = x;
@@ -13,25 +13,24 @@ public class Terrain{
  
  public int roundX(){
    int d = getX() / 50;
-   int r = getX() % 50;
+   int r = getX() % 50;   
    
    if (r < 25){
-     return d * 50;
+     return (d - 1) * 50;
    }
    else{
-     return (d + 1) * 50;
+     return (d - 2) * 50;
    }
-   
  }
   public int roundY(){
    int d = getY() / 50;
    int r = getY() % 50;
    
    if (r < 25){
-     return d * 50;
+     return (d - 1) * 50;
    }
    else{
-     return (d + 1) * 50;
+     return (d - 2) * 50;
    }
  }
  

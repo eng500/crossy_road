@@ -1,7 +1,6 @@
 public class Camera{
   ArrayList<Terrain> background;
   
-  /**
   public Camera(){
     background = new ArrayList<Terrain>();
   }
@@ -19,10 +18,9 @@ public class Camera{
       if (current.getY() > 600){
         background.remove(current);
       }
-      //current.makeAvatar();
+      current.makeAvatar();
     }
   }
-  */
   
   void addTerrain(){
     int random = (int)random(1, 9);
@@ -59,10 +57,5 @@ public class Camera{
       Tree tree = new Tree(0,0);
       background.add(tree);
     }
-
-  /**
-  void add Terrain(){
-    int rand()
   }
-  */
 }

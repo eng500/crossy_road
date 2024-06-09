@@ -1,10 +1,12 @@
 PVector c_location, c_velocity;
+float[] col;
 
 public class Car extends Terrain{
   public Car(int x, int y){
-    super(x, y, 50, 100, 3);
+    super(x, y, 50, 100, 4);
     c_location = new PVector(x, y);
     c_velocity = new PVector(0.8, 0.0);
+    col = new float[] {random(255), random(255), random(255)};
   }
   
   public void move(){
@@ -18,7 +20,7 @@ public class Car extends Terrain{
     rect(x - 38, y + 2, super.getWidth() - 30, super.getHeight() - 20);
     
     //random gen color for car body fill();
-    fill(35, 104, 217);
+    fill(col[0], col[1], col[2]);
     rect(x - 50, y + 18, super.getWidth(), super.getHeight() - 26);
     
     fill(0);
