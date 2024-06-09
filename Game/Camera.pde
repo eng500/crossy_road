@@ -1,6 +1,6 @@
 public class Camera{
   ArrayList<Terrain> background;
-  
+
   public Camera(){
     background = new ArrayList<Terrain>();
   }
@@ -21,13 +21,9 @@ public class Camera{
         background.remove(i);
       }
       current.makeAvatar();
-  }
-  
-      //else {
-      //  currInd++;
-      //}
     }
   }
+  
   
   
   void addTerrain(){

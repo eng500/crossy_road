@@ -62,6 +62,8 @@ void draw(){
   //println("Original chickne Y: " + player.getY());
   //player.die();
 
+  //h1.makeHighway();
+
   if (millis() - timer >= 500) { // does the below actions every ? seconds
     camera.addTerrain();
     camera.advanceCam();
