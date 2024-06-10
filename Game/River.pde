@@ -1,8 +1,19 @@
+ArrayList<Lilypad> lilypads;
+
 public class River extends Terrain{
   public River(int x, int y){
     super(0, y, 50, 600, 3);
     //int[] info = {0, super.getY(), super.getResponse()};
     //oList.add(info);
+  }
+  
+  void addLilypad(){
+    int rand = (int)random(4, 13);
+    for (int j = 0; j <= rand; j++){
+    int randLoc = (int)random(0, 8);
+    Lilypad lilypad = new Lilypad(50*randLoc, current.getY());
+    lilypads.add(lilypad);
+    }
   }
   
   @Override

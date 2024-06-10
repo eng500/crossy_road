@@ -6,10 +6,11 @@ class Road extends Terrain{
     float r = random(1, 5);
     cars = new Car[(int)r];
     for (int i = 0; i < cars.length; i++){
-      cars[i] = new Car(0, getY());
+      cars[i] = new Car(0, this.getY());
     }
   }
  
+<<<<<<< HEAD
  public Car[] getCars(){
    return cars;
  }
@@ -17,6 +18,15 @@ class Road extends Terrain{
  void setCars(Car[] newCars){
    cars = newCars;
  }
+=======
+ //Car[] getCars(){
+ //  return this.cars;
+ //}
+ 
+ //void setCars(Car[] newCars){
+ //  this.cars = newCars;
+ //}
+>>>>>>> 1095cb0362dc9f5c7025f9df3f2f1677c33b8f9f
   
   @Override
   public void makeAvatar(){
