@@ -72,7 +72,7 @@ void draw(){
 
   //h1.makeHighway();
 
-  if (millis() - timer >= 750) { // does the below actions every ? seconds
+  if (millis() - timer >= 1000) { // does the below actions every ? seconds
     camera.addTerrain();
     camera.advanceCam();
     timer = millis();

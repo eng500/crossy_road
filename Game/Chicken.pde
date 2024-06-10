@@ -98,8 +98,8 @@ public class Chicken{
     return false;
   }
   
-  public void dieOffScreen(){
-     if (millis() - second() >= 8000) { //used to discourage the player from staying inactive in the first row for too long
+  public void dieOffScreen(){ //used to discourage the player from staying inactive in the first row for too long
+     if (millis() - second() >= 8000) { 
       if (getY() == 550){
         die();
       }
