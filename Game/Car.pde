@@ -1,4 +1,4 @@
-PVector c_location, c_velocity;
+public PVector c_location, c_velocity;
 float[] col;
 
 public class Car extends Terrain{
@@ -9,6 +9,10 @@ public class Car extends Terrain{
     col = new float[] {random(255), random(255), random(255)};
   }
   
+  public void addY(){
+    PVector c_addY = new PVector(0.0, 0.5);
+    c_location.add(c_addY);
+  }
   
   public void move(){
     

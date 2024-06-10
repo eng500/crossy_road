@@ -23,9 +23,17 @@ public class Camera{
     for (int i = 0; i < background.size(); i++){
       Road test = new Road(0);
       Terrain current = background.get(i);
+      /**
       if (current.getClass() == test.getClass()){
         for (int j = 0; j < current.getCars().size; j++){
           current.getCars().get(i).setY(current.getY()+50);
+        }
+        */
+      if (current instanceof Road){
+        Road r = current;
+        Car[] c_list = r.getCars();
+        for (Car c : c_list){
+          c.addY();
         }
       }
       current.setY(current.getY()+50);
@@ -33,8 +41,8 @@ public class Camera{
         background.remove(i);
       }
       current.makeAvatar();
+      }
     }
-  }
   
   
   
