@@ -21,7 +21,13 @@ public class Camera{
   void advanceCam(){
     //int currInd = 0;
     for (int i = 0; i < background.size(); i++){
+      Road test = new Road(0);
       Terrain current = background.get(i);
+      if (current.getClass() == test.getClass()){
+        for (int j = 0; j < current.getCars().size; j++){
+          current.getCars().get(i).setY(current.getY()+50);
+        }
+      }
       current.setY(current.getY()+50);
       if (current.getY() >= 600){
         background.remove(i);

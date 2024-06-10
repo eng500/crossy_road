@@ -10,6 +10,13 @@ class Road extends Terrain{
     }
   }
  
+ Car[] getCars(){
+   return this.cars;
+ }
+ 
+ void setCars(Car[] newCars){
+   this.cars = newCars;
+ }
   
   @Override
   public void makeAvatar(){
