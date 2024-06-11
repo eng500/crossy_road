@@ -1,4 +1,4 @@
-ArrayList<Lilypad> lilypads;
+public ArrayList<Lilypad> lilypads;
 
 public class River extends Terrain{
   public River(int x, int y){

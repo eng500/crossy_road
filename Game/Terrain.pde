@@ -23,10 +23,6 @@ public class Terrain{
    }
  }
  
- public int roundX2(){
-   return 0;
- }
- 
   public int roundY(){
    int d = getY() / 50;
    int r = getY() % 50;
@@ -72,4 +68,5 @@ public class Terrain{
  
  public void makeAvatar(){
  }
+ 
 }

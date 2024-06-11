@@ -1,4 +1,5 @@
-  float[] col =  {random(255), random(255), random(255)};
+  //randomizes car color each time you spawn
+  float[] col =  {random(255), random(255), random(255)}; 
   int anotherTimer;
   
   public class Car extends Terrain{
@@ -15,7 +16,6 @@
       else{
           setX(getX() + 2);
       }
-      
       makeAvatar(getX(), getY());
     }
     
@@ -24,26 +24,17 @@
        int d = getX() / 50;
        int r = getX() % 50;   
        
-       if (r < 25){
-         return (d - 1) * 50;
+       if (r < 20){
+         return (d) * 50;
+       }
+       else if (r < 35){
+         return (d + 1) * 50;
        }
        else{
-         return (d - 2) * 50;
+         return (d) * 50;
        }
     }
     
-    @Override
-    public int roundX2(){
-       int d = getX() / 50;
-       int r = getX() % 50;   
-       
-       if (r < 25){
-         return (d - 1) * 50 + getWidth();
-       }
-       else{
-         return (d - 2) * 50 + getWidth();
-       }
-    }
     
     public int roundY(){
        int d = getY() / 50;

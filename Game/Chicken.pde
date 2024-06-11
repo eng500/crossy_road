@@ -1,5 +1,4 @@
 int distance = 50;
-public boolean onLily;
 
 public class Chicken{
   int xPos;
@@ -7,6 +6,7 @@ public class Chicken{
   boolean alive;
   int points;
   boolean moved;
+  boolean saveFromRiver;
   
   public Chicken(){
     xPos = 600/2;
@@ -15,7 +15,7 @@ public class Chicken{
     alive = true;
     points = 0;
     moved = false;
-    onLily = false;
+    saveFromRiver = false;
   }
   
   public int getX(){
@@ -38,29 +38,22 @@ public class Chicken{
     return alive;
   }
   
-  public void setAlive(boolean status){
-    alive = status;
-  }
-  
   public int getPoints(){
     return points;
   }
   
-  public boolean getOnLily(){
-    return onLily;
+  public void addPoint(){
+    points++;
   }
   
-  public void setOnLily(boolean n){
-    onLily = n;
-  }
   
   //danger() will return true when the chicken must die
-  // 1 = neutral, 2 = blocks chicken from advancing, 3 = river(dangerous), 
-  // 4 = car (dangerous)
+  // 1 = neutral, 2 = blocks chicken from advancing, 
+  // 3 = river(dangerous), 4 = car (dangerous)
   public boolean danger(){
     for (Terrain ob : background){
       if (ob.getResponse() == 3){
-        if (onLily == false && getY() == ob.getY()){
+        if (getY() == ob.getY()){
           return true;
         }
       }
@@ -68,10 +61,21 @@ public class Chicken{
     return false;
   }
   
+  public boolean onLily(){
+    for (Terrain ob : background){
+        if (ob.getResponse() == 1){
+          if (getX() == ob.getX() && getY() == ob.getY()){
+            return true;
+          }
+        }
+     }
+     return false;
+  }
+  
   public boolean autoCrash(){
     for(Terrain ob : background){
       if (ob.getResponse() == 4){
-        if (getY() == ob.roundY() && (getX() == ob.roundX() || getX() == ob.roundX2())){
+        if (getY() == ob.roundY() && (getX() == ob.roundX() || getX() == ob.roundX() + 50)){
           return true;
         }
       }
@@ -84,28 +88,28 @@ public class Chicken{
       if (ob.getResponse() == 4){
         if (direction == 1){
           if (getY() - 50 == ob.getY()){
-            if (getX() == ob.roundX() || getX() == ob.roundX2()){
+            if (getX() == ob.roundX() || getX() == ob.roundX() + 50){
               return true;
             }
           }
         }
         if (direction == 2){
           if (getY() + 50 == ob.getY()){
-            if (getX() == ob.roundX() || getX() == ob.roundX2()){
+            if (getX() == ob.roundX() || getX() == ob.roundX() + 50){
               return true;
             }
           }
         }
         if (direction == 3){
           if (getY() == ob.getY()){
-            if (getX() - 50 == ob.roundX() || getX() - 50 == ob.roundX2()){
+            if (getX() - 50 == ob.roundX() || getX() - 50 == ob.roundX() + 50){
               return true;
             }
           }
         }
         if (direction == 4){
           if (getY() == ob.getY()){
-            if (getX() + 50 == ob.roundX() || getX() + 50 == ob.roundX2()){
+            if (getX() + 50 == ob.roundX() || getX() + 50 == ob.roundX() + 50){
               return true;
             }
           }
@@ -185,7 +189,7 @@ public class Chicken{
           else{
             yPos = yPos - distance;
             moved = true;
-            if (danger()){
+            if (danger() && !onLily()){
               die();
             }
           }
@@ -199,7 +203,7 @@ public class Chicken{
           else{
             yPos = yPos + distance;
             moved = true;
-            if (danger()){
+            if (danger() && !onLily()){
               die();
             }
           }
@@ -213,7 +217,7 @@ public class Chicken{
           else{
             xPos = xPos - distance;
             moved = true;
-            if (danger()){
+            if (danger() && !onLily()){
               die();
             }
           }
@@ -227,7 +231,7 @@ public class Chicken{
           else{
             xPos = xPos + distance;
             moved = true;
-            if (danger()){
+            if (danger() && !onLily()){
               die();
             }
           }

@@ -1,4 +1,4 @@
-Car[] c_list = new Car[(int) random(0, 5)];
+Car[] c_list = new Car[(int) random(1, 5)];
 class Road extends Terrain{
   public Road(int y){
     super(0, y, 50, 600, 1);
