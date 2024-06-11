@@ -28,16 +28,16 @@ public class Camera{
       //  for (int j = 0; j < current.getCars().size; j++){
       //    current.getCars().get(i).setY(current.getY()+50);
       //Road test = new Road(0);
-      if (current.getClass().toString().equals("class Game$River")){
-        River currentRiv = background.get(i);
-        Lilypad[] lilypads = currentRiv.getLilypads(); 
-        for (int j = 0; j <= lilypads.size(); j++){
-          lilypads[j].makeAvatar();
-        }
-      }
-      else{
-        Terrain current = background.get(i);
-      }
+      //if (current.getClass().toString().equals("class Game$River")){
+      //  River currentRiv = background.get(i);
+      //  Lilypad[] lilypads = currentRiv.getLilypads(); 
+      //  for (int j = 0; j <= lilypads.size(); j++){
+      //    lilypads[j].makeAvatar();
+      //  }
+      //}
+      //else{
+      //  Terrain current = background.get(i);
+      //}
       
       //print(current.getClass().toString());
       //if (current.getClass().toString().equals("class Game$River")){
@@ -95,6 +95,10 @@ public class Camera{
     if (random == 1){
       River river = new River(0,0);
       background.add(river);
+      river.addLilypad();
+      for (int i = 0; i < river.getLilypads().size(); i++){
+        background.add(river.getLilypads().get(i));
+      }
     }
     if (random == 2){
       Road road = new Road(0);
