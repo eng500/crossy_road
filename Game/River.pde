@@ -17,8 +17,27 @@ public class River extends Terrain{
         }
       }
     }
+
+  
+    lilypads = new ArrayList<Lilypad>();
+    //int[] info = {0, super.getY(), super.getResponse()};
+    //oList.add(info);
   }
   
+  void addLilypad(){
+    int rand = (int)random(4, 13);
+    for (int j = 0; j <= rand; j++){
+    int randLoc = (int)random(0, 8);
+    Lilypad lilypad = new Lilypad(50*randLoc, this.getY());
+    lilypads.add(lilypad);
+    // IMPLEMENT ADDING LILYPADS IN CAMERA CLASS, ADD MAKEAVATARS FOR LILYPADS IN 
+    // RIVER MAKEAVATAR
+    }
+  }
+  
+  ArrayList<Lilypad> getLilypads(){
+    return this.lilypads;
+  }
   
   @Override
   public void makeAvatar(){

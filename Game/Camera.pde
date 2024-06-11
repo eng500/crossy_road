@@ -23,6 +23,18 @@ public class Camera{
       if (current.getClass().toString().equals("class Game$River")){
         River current = background.get(i);
         // MAKE GET LILYPADS METHOD IN RIVER CLASS
+
+      
+      //if (current.getClass() == test.getClass()){
+      //  for (int j = 0; j < current.getCars().size; j++){
+      //    current.getCars().get(i).setY(current.getY()+50);
+      //Road test = new Road(0);
+      if (current.getClass().toString().equals("class Game$River")){
+        River currentRiv = background.get(i);
+        Lilypad[] lilypads = currentRiv.getLilypads(); 
+        for (int j = 0; j <= lilypads.size(); j++){
+          lilypads[j].makeAvatar();
+        }
       }
       else{
         Terrain current = background.get(i);
@@ -37,6 +49,21 @@ public class Camera{
           background.add(lilypad);
         }
 
+      //if (current.getClass().toString().equals("class Game$River")){
+      //  //int rand = (int)random(4, 13);
+      //  //for (int j = 0; j <= rand; j++){
+      //  //  int randLoc = (int)random(0, 8);
+      //    Lilypad lilypad = new Lilypad(50*randLoc, current.getY());
+      //    background.add(lilypad);
+      //  }
+        
+      //if (current instanceof Road){
+      //  Road r = current;
+      //  Car[] c_list = r.getCars();
+      //  for (Car c : c_list){
+      //    c.addY();
+      //  }
+      //}
       current.setY(current.getY()+50);
       if (current.getY() >= 600){
         background.remove(i);
