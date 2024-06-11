@@ -8,12 +8,6 @@
    }
    
    public void move(){
-      /**
-      if (millis() - anotherTimer >= 750) { // does the below actions every ? seconds
-        //setY(getY() + 50);
-        anotherTimer = millis();
-      }
-      */
       
      if (getX() == 600){
           setX(0);

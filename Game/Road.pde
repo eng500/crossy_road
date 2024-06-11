@@ -3,7 +3,7 @@ class Road extends Terrain{
   public Road(int y){
     super(0, y, 50, 600, 1);
     for (int i = 0; i < c_list.length; i++){
-      Car a = new Car(0, getY());
+      Car a = new Car(-1 * (int)random(0, 10), getY());
       c_list[i] = a;
     }
   }

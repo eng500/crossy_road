@@ -7,7 +7,7 @@ public class Lilypad extends Terrain{
     if (getX() == player.getX() && getY() == player.getY()){
       onLily = true;
     }
-    else{
+    if (getX() != player.getX() || getY() != player.getY()){
       onLily = false;
     }
   }
