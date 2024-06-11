@@ -18,6 +18,44 @@
       
       makeAvatar(getX(), getY());
     }
+    
+    
+    public int roundX(){
+       int d = getX() / 50;
+       int r = getX() % 50;   
+       
+       if (r < 25){
+         return (d - 1) * 50;
+       }
+       else{
+         return (d - 2) * 50;
+       }
+    }
+    
+    @Override
+    public int roundX2(){
+       int d = getX() / 50;
+       int r = getX() % 50;   
+       
+       if (r < 25){
+         return (d - 1) * 50 + getWidth();
+       }
+       else{
+         return (d - 2) * 50 + getWidth();
+       }
+    }
+    
+    public int roundY(){
+       int d = getY() / 50;
+       int r = getY() % 50;   
+       
+       if (r < 25){
+         return (d - 1) * 50;
+       }
+       else{
+         return (d - 2) * 50;
+       }
+    }
   
   void makeAvatar(int x, int y){
     noStroke();

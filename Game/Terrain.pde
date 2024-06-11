@@ -22,6 +22,11 @@ public class Terrain{
      return (d - 2) * 50;
    }
  }
+ 
+ public int roundX2(){
+   return 0;
+ }
+ 
   public int roundY(){
    int d = getY() / 50;
    int r = getY() % 50;

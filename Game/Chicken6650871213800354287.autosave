@@ -68,54 +68,6 @@ public class Chicken{
     return false;
   }
   
-  public boolean autoCrash(){
-    for(Terrain ob : background){
-      if (ob.getResponse() == 4){
-        if (getY() == ob.roundY() && (getX() == ob.roundX() || getX() == ob.roundX2())){
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-  
-   public boolean crash(int direction){
-    for (Terrain ob : background){
-      if (ob.getResponse() == 4){
-        if (direction == 1){
-          if (getY() - 50 == ob.getY()){
-            if (getX() == ob.roundX() || getX() == ob.roundX2()){
-              return true;
-            }
-          }
-        }
-        if (direction == 2){
-          if (getY() + 50 == ob.getY()){
-            if (getX() == ob.roundX() || getX() == ob.roundX2()){
-              return true;
-            }
-          }
-        }
-        if (direction == 3){
-          if (getY() == ob.getY()){
-            if (getX() - 50 == ob.roundX() || getX() - 50 == ob.roundX2()){
-              return true;
-            }
-          }
-        }
-        if (direction == 4){
-          if (getY() == ob.getY()){
-            if (getX() + 50 == ob.roundX() || getX() + 50 == ob.roundX2()){
-              return true;
-            }
-          }
-        }
-      }
-    }
-    return false;
-  }
-  
-  
   public void autoBlock(){
     for (Terrain ob : background){
       if (ob.getResponse() == 2){
@@ -156,7 +108,7 @@ public class Chicken{
   }
   
   public void dieOffScreen(){ //used to discourage the player from staying inactive in the first row for too long
-     if (millis() - second() >= 5000) { 
+     if (millis() - second() >= 8000) { 
       if (getY() == 550){
         die();
       }
@@ -167,10 +119,6 @@ public class Chicken{
     exit();
   }
   
-  public void autoMove(){
-    player.move(2);
-  }
-  
   public void move(int direction){
     // 1 - up
     // 2 - down
@@ -179,57 +127,37 @@ public class Chicken{
     
       if (direction == 1){
         if (yPos >= (0 + distance) && block(1) == false){
-          if (crash(1)){
+          yPos = yPos - distance;
+          moved = true;
+          if (danger()){
             die();
-          }
-          else{
-            yPos = yPos - distance;
-            moved = true;
-            if (danger()){
-              die();
-            }
           }
         }
       }
       else if (direction == 2){
         if (yPos <= (height - distance - 50) && block(2) == false){
-          if (crash(2)){
+          yPos = yPos + distance;
+          moved = true;
+          if (danger()){
             die();
-          }
-          else{
-            yPos = yPos + distance;
-            moved = true;
-            if (danger()){
-              die();
-            }
           }
         }
       }
-      else if (direction == 3){        
+      else if (direction == 3){
         if (xPos >= (0 + distance) && block(3) == false){
-          if (crash(3)){
+          xPos = xPos - distance;
+          moved = true;
+          if (danger()){
             die();
-          }
-          else{
-            xPos = xPos - distance;
-            moved = true;
-            if (danger()){
-              die();
-            }
           }
         }
       }
       else{
         if (xPos <= (width - distance - 50) && block(4) == false){
-          if (crash(4)){
+          xPos = xPos + distance;
+          moved = true;
+          if (danger()){
             die();
-          }
-          else{
-            xPos = xPos + distance;
-            moved = true;
-            if (danger()){
-              die();
-            }
           }
         }
       }

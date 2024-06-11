@@ -13,6 +13,9 @@ void draw(){
   if (player.danger() == true){
     player.die();
   }
+  if (player.autoCrash() == true){
+    player.die();
+  }
   
   player.autoBlock();
   player.dieOffScreen();
@@ -50,6 +53,7 @@ void draw(){
     camera.addTerrain();
     camera.advanceCam();
     timer = millis();
+    player.autoMove();
   }  
   
   camera.makeAvatars();
