@@ -1,52 +1,29 @@
-/**
-public PVector c_location, c_velocity;
-float[] col;
-
-public class Car extends Terrain{
-  public Car(int x, int y){
-    super(x, y, 50, 100, 4);
-    c_location = new PVector(x, y);
-    c_velocity = new PVector(0.3, 0.0);
-    col = new float[] {random(255), random(255), random(255)};
-  }
-  
-  public void move(){
-    if (c_location.x >= 600){
-      c_location.x = 0;
-    }
-    c_location.add(c_velocity);
-    
-    makeAvatar((int) c_location.x, (int) c_location.y);
-  }
-  */
-  
-  //emily rewrote the Car code + she thinks it broke the game, so maybe not
-  
-  final float[] col = new float[] {random(255), random(255), random(255)};
+  float[] col =  {random(255), random(255), random(255)};
   int anotherTimer;
   
   public class Car extends Terrain{
     public Car(int x, int y){
       super(0, y, 50, 100, 4);
       anotherTimer = millis();
-    }
-    
-    /**
-    public void move(){
-      if (millis() - anotherTimer >= 1000) { // does the below actions every ? seconds
-        setY(getY() + 50);
+   }
+   
+   public void move(){
+      /**
+      if (millis() - anotherTimer >= 750) { // does the below actions every ? seconds
+        //setY(getY() + 50);
         anotherTimer = millis();
       }
-      if (getX() >= 600){
-        setX(0);
+      */
+      
+     if (getX() == 600){
+          setX(0);
       }
       else{
-        setX(getX() + 2);
+          setX(getX() + 2);
       }
-      makeAvatar(getX(), getY());
       
+      makeAvatar(getX(), getY());
     }
-    */
   
   void makeAvatar(int x, int y){
     noStroke();

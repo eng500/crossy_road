@@ -2,7 +2,7 @@ Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing;
 int timer;
 Camera camera = new Camera();
-Car c = new Car(200, 200);
+
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now  
 }
@@ -45,10 +45,9 @@ void draw(){
   
   player.makeAvatar(ori);
 
-  if (millis() - timer >= 1000) { // does the below actions every ? seconds
+  if (millis() - timer >= 750) { // does the below actions every ? seconds
     camera.addTerrain();
-    //COMMENTED OUT CAMERA ADVANCE CAM BC the function isnt working
-    //camera.advanceCam();
+    camera.advanceCam();
     timer = millis();
   }  
   
