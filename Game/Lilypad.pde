@@ -3,15 +3,6 @@ public class Lilypad extends Terrain{
     super(x, y, 50, 50, 1);
   }
   
-  public void checkLilyChicken(){
-    if (getX() == player.getX() && getY() == player.getY()){
-      onLily = true;
-    }
-    if (getX() != player.getX() || getY() != player.getY()){
-      onLily = false;
-    }
-  }
-  
   @Override
   public void makeAvatar(){
     noStroke();
@@ -21,7 +12,5 @@ public class Lilypad extends Terrain{
     fill(69, 152, 82);
     rect(super.getX()+25, super.getY(), 13, 38);
     rect(super.getX(), super.getY()+25, 38, 13);
-    
-    checkLilyChicken();
   }
 }
