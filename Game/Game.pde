@@ -1,10 +1,8 @@
-//public ArrayList<int[]> oList = new ArrayList<int[]>();
 Chicken player = new Chicken();
 int ori = 1; //the chicken's direction it is facing;
 int timer;
 Camera camera = new Camera();
-//River r1 = new River(200, 200);
-
+Car c = new Car(200, 200);
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now  
 }
@@ -44,50 +42,19 @@ void draw(){
   rect(450, 0, 50, 50);
   rect(550, 0, 50, 50);
   */
-    
-  //camera.makeAvatars();
-
-/**
-  if (millis() - timer >= 2000) { // does the below actions every ? seconds
-    camera.addTerrain();
-    camera.advanceCam();
-    timer = millis();
-  }
-  if (millis() - timer >= 2000) {
-    camera.advanceCam();
-    timer = millis();
-  }
-  */
-  
-  //r1.makeAvatar();
-  //println(r1.roundX() + " " + r1.roundY());
-  
   
   player.makeAvatar(ori);
 
-
-  //println("Original chickne X: " + player.getX());
-  //println("Original chickne Y: " + player.getY());
-  //player.die();
-
-  //h1.makeHighway();
-
   if (millis() - timer >= 1000) { // does the below actions every ? seconds
     camera.addTerrain();
-    camera.advanceCam();
+    //COMMENTED OUT CAMERA ADVANCE CAM BC the function isnt working
+    //camera.advanceCam();
     timer = millis();
   }  
   
   camera.makeAvatars();
   player.makeAvatar(ori);
 
-  //if (millis() - timer >= 500) { // does the below actions every ? seconds
-  //  camera.addTerrain();
-  //  camera.advanceCam();
-  //  timer = millis();
-  //}
-  //ro1.makeAvatar();
-  //c1.move();
 }
 
 void keyPressed(){
