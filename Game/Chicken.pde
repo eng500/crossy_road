@@ -1,4 +1,5 @@
 int distance = 50;
+public boolean onLily;
 
 public class Chicken{
   int xPos;
@@ -14,6 +15,7 @@ public class Chicken{
     alive = true;
     points = 0;
     moved = false;
+    onLily = false;
   }
   
   public int getX(){
@@ -44,12 +46,21 @@ public class Chicken{
     return points;
   }
   
+  public boolean getOnLily(){
+    return onLily;
+  }
+  
+  public void setOnLily(boolean n){
+    onLily = n;
+  }
+  
   //danger() will return true when the chicken must die
-  // 1 = neutral, 2 = blocks chicken from advancing, 3 = river(dangerous), 4 = car (dangerous)
+  // 1 = neutral, 2 = blocks chicken from advancing, 3 = river(dangerous), 
+  // 4 = car (dangerous)
   public boolean danger(){
     for (Terrain ob : background){
       if (ob.getResponse() == 3){
-        if (getY() == ob.getY()){
+        if (getY() == ob.getY() && onLily == false){
           return true;
         }
       }
@@ -69,7 +80,6 @@ public class Chicken{
   }
   
   //block() will return true when the chicken is blocked, and false when the chicken can move
-  
   public boolean block(int direction){
     for (Terrain ob : background){
       if (ob.getResponse() == 2){
@@ -107,7 +117,6 @@ public class Chicken{
   }
   
   public void die(){
-    //makeAvatar(5);
     exit();
   }
   
@@ -228,18 +237,5 @@ public class Chicken{
       fill(252, 29, 13);
       rect(this.xPos + 20, this.yPos, 12, 2);
     }
-    /**
-    if (direction == 5){
-      fill(255);
-      rect(this.xPos, this.yPos, 50, 50, 28);
-     
-      fill(252, 29, 13);
-      rect(this.xPos + 24, this.yPos, 4, 10);
-
-    }
-    */
   }
-  
-  
-
 }

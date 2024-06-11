@@ -1,4 +1,4 @@
-public Car[] cars;
+Car[] cars;
 
 class Road extends Terrain{
   public Road(int y){
@@ -6,11 +6,10 @@ class Road extends Terrain{
     float r = random(1, 5);
     cars = new Car[(int)r];
     for (int i = 0; i < cars.length; i++){
-      cars[i] = new Car(0, this.getY());
+      cars[i] = new Car(0, getY());
     }
   }
  
-<<<<<<< HEAD
  public Car[] getCars(){
    return cars;
  }
@@ -18,15 +17,12 @@ class Road extends Terrain{
  void setCars(Car[] newCars){
    cars = newCars;
  }
-=======
- //Car[] getCars(){
- //  return this.cars;
- //}
  
- //void setCars(Car[] newCars){
- //  this.cars = newCars;
- //}
->>>>>>> 1095cb0362dc9f5c7025f9df3f2f1677c33b8f9f
+ void moveCars(){
+   for (int i = 0; i < cars.length; i++){
+     cars[i].move();
+   }
+ }
   
   @Override
   public void makeAvatar(){
@@ -39,5 +35,7 @@ class Road extends Terrain{
     rect(super.getX() + 170, super.getY() + 3, 50, super.getHeight()/8);
     rect(super.getX() + 320, super.getY() + 3, 50, super.getHeight()/8);
     rect(super.getX() + 470, super.getY() + 3, 50, super.getHeight()/8);
+    
+    //moveCars();
   }
 }
