@@ -33,6 +33,10 @@ public class Camera{
     if (random == 1){
       River river = new River(0,0);
       background.add(river);
+      river.addLilypad();
+      for (int i = 0; i < river.getLilypads().size(); i++){
+        background.add(river.getLilypads().get(i));
+      }
     }
     if (random == 2){
       Road road = new Road(0);
