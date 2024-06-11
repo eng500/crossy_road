@@ -3,8 +3,6 @@ int ori = 1; //the chicken's direction it is facing;
 int timer;
 Camera camera = new Camera();
 
-River r1 = new River(200, 200);
-Lilypad l1 = new Lilypad(400, 200);
 
 void setup(){
   size(600, 600); //each square is 50x50 - 12 squares for now  
@@ -54,8 +52,6 @@ void draw(){
     timer = millis();
   }  
   
-  r1.makeAvatar();
-  l1.makeAvatar();
   camera.makeAvatars();
   player.makeAvatar(ori);
   

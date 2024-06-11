@@ -60,7 +60,7 @@ public class Chicken{
   public boolean danger(){
     for (Terrain ob : background){
       if (ob.getResponse() == 3){
-        if (getY() == ob.getY() && onLily == false){
+        if (onLily == false && getY() == ob.getY()){
           return true;
         }
       }
