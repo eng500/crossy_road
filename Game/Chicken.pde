@@ -3,7 +3,6 @@ int distance = 50;
 public class Chicken{
   int xPos;
   int yPos;
-  boolean alive;
   int points;
   boolean moved;
   boolean saveFromRiver;
@@ -12,7 +11,6 @@ public class Chicken{
     xPos = 600/2;
     yPos = 550;
     
-    alive = true;
     points = 0;
     moved = false;
     saveFromRiver = false;
@@ -32,10 +30,6 @@ public class Chicken{
   
   public void setY(int y){
     yPos = y;
-  }
-  
-  public boolean getAlive(){
-    return alive;
   }
   
   public int getPoints(){
