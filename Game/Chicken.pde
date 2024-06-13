@@ -72,6 +72,9 @@ public class Chicken{
         if (getY() == ob.roundY() && (getX() == ob.roundX() || getX() == ob.roundX() + 50)){
           return true;
         }
+        if (getY() != ob.roundY()){
+          return false;
+        }
       }
     }
     return false;

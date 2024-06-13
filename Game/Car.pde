@@ -1,11 +1,11 @@
   //randomizes car color each time you spawn
   float[] col =  {random(255), random(255), random(255)}; 
-  int anotherTimer;
+  //int anotherTimer;
   
   public class Car extends Terrain{
     public Car(int x, int y){
       super(0, y, 50, 100, 4);
-      anotherTimer = millis();
+      //anotherTimer = millis();
    }
    
    public void move(){

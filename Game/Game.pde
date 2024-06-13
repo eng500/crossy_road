@@ -53,16 +53,15 @@ void draw(){
   if (player.danger() == true && !player.onLily()){
     player.die();
   }
-  if (player.autoCrash() == true){
-    player.die();
-  }
   
   camera.makeAvatars();
   player.makeAvatar(ori);
   text(player.getPoints(), 10, 50);
   textSize(65);
   
-
+  if (player.autoCrash() == true){
+    player.die();
+  }
 }
 
 void keyPressed(){

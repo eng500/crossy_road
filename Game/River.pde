@@ -7,7 +7,7 @@ public class River extends Terrain{
    }
    
   void addLilypad(){
-    int rand = (int)random(4, 13);
+    int rand = (int)random(5, 13);
     for (int j = 0; j <= rand; j++){
       int randLoc = (int)random(0, 8);
       Lilypad lilypad = new Lilypad(50*randLoc, yPos);
